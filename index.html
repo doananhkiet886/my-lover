@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Lover</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/heart/favicon.ico">
+</head>
+
+<body>
+    <div class="main">
+        <!-- Begin: Header -->
+        <div class="header">
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#about">Trang chủ </a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#memory">Kỷ niệm</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#banner">Bìa</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#video-youtube">Video</a>
+                </li>
+            </ul>
+
+            <div class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- End: Header -->
+
+        <!-- Begin: Container -->
+        <div class="container">
+            <!-- Begin: About -->
+            <div id="about" class="about">
+                <div class="content-section">
+                    <h2>Giới thiệu</h2>
+                    <p>Love!</p>
+                    <div class="row">
+                        <div class="text-center mt40 mt16 col col-4 mobile-col-3">
+                            <h3>Em 💏</h3>
+                            <img class="mt16" src="./assets/image/about/my.jpg" alt="">
+                        </div>
+
+                        <div class="heart mobile-col-3">
+                            <span class="heart-icon">❤️</span>
+                        </div>
+
+                        <div class="text-center mt40 mt16 col col-4 mobile-col-3">
+                            <h3>Anh 💏</h3>
+                            <img class="mt16" src="./assets/image/about/kiet.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End: About -->
+
+            <!-- Begin: Memory -->
+            <div id="memory" class="memory">
+                <div class="content-section">
+                    <h2>Kỷ niệm</h2>
+                    <p>Anh và em đã cùng nhau đi qua những khoảnh khắc này nè!</p>
+
+                    <div class="memory-flash-list row mobile-row mt32">
+                        <div class="memory-flash-item col col-3 mobile-col-full">
+                            <img src="./assets/image/memory/memory_1.jpg" alt="">
+                            <div class="flash-item-desc">
+                                <p class="content__date">Cái miệng mỉm cười giống nhau quá</p>
+                            </div>
+                        </div>
+
+                        <div class="memory-flash-item col col-3 mobile-col-full">
+                            <img src="./assets/image/memory/memory_2.jpg" alt="">
+                            <div class="flash-item-desc">
+                                <p class="content__date">Cận đeo kính cũng giống nhau nữa nè</p>
+                            </div>
+                        </div>
+
+                        <div class="memory-flash-item col col-3 mobile-col-full">
+                            <img src="./assets/image/memory/memory_3.jpg" alt="">
+                            <div class="flash-item-desc">
+                                <p class="content__date">Hài dữ vậy trời hehe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="banner" class="banner">
+                <div class="banner-flash">
+                    <img src="./assets/image/slider/nam_tay.jpg" alt="">
+                    <div class="banner-flash__desc">
+                        <h3>I love you <3 </h3>
+                        <!-- <p class="mt8">Kiệt My <3 </p> -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="video-youtube" class="me-video">
+                <iframe class="video-youtube" src="https://www.youtube.com/embed/8es1ZZdwquk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="social-networks">
+                <a href="https://www.facebook.com/doananhkiet886">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/doananhkiet0506">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@doankiet2002">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="https://github.com/doananhkiet0506">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Open and close mobile menu -->
+        <script>
+            var mobileMenuBtn = document.querySelector('.header .mobile-menu-btn')
+            var header = document.querySelector('.main .header')
+            var headerHeight = header.clientHeight
+
+            mobileMenuBtn.addEventListener('click', function () {
+                var isClosed = header.clientHeight === headerHeight
+                if (isClosed) {
+                    header.classList.add('open-mobile-menu')
+                } else {
+                    header.classList.remove('open-mobile-menu')
+                }
+            })
+
+            var menuItems = document.querySelectorAll('.nav .nav__item a[href*="#"]')
+            for (var menuItem of menuItems) {
+                menuItem.addEventListener('click', function (event) {
+                    var isParrentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('nav-item__sub-nav')
+                    if (isParrentMenu) {
+                        event.preventDefault
+                    } else {
+                        header.classList.remove('open-mobile-menu')
+                    }
+                })
+            }
+        </script>
+</body>
+
+</html>
