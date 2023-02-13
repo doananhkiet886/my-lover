@@ -226,7 +226,7 @@ html {
 
 .banner-flash__desc {
     position: absolute;
-    bottom: 75px;
+    bottom: 90px;
     left: 0;
     right: 0;
     text-align: center;
@@ -391,7 +391,7 @@ html {
 .footer .social-networks a {
     color: #000;
     opacity: 0.6;
-    margin-left: 8px;
+    margin-left: 14px;
     transition: 0.2s;
 }
 
