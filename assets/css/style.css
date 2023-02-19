@@ -155,7 +155,6 @@ html {
 
 .nav .nav__item a {
     font-weight: 520;
-    text-transform: uppercase;
     display: inline-block;
     line-height: 46px;
     padding: 0 24px;
