@@ -111,6 +111,15 @@ html {
     width: 100% !important;
 }
 
+
+.animation-move-top {
+    transition: transform linear 0.05s;
+}
+
+.animation-move-top:hover {
+    transform: translateY(-10px);
+}
+
 .btn {
     font-size: 13px;
     padding: 12px 24px;
@@ -130,6 +139,8 @@ html {
     border-color:rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
+
 
 /* Begin: Header */
 .header {
@@ -284,7 +295,6 @@ html {
     text-align: center;
     text-shadow: 0px 0px 30px rgb(0, 0, 0, 0.4);
 }
-
 
 .about img {
     width: 100%;
